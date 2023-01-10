@@ -15,7 +15,7 @@ const HomePage = () => {
                 <li>Routing</li>
                 <li>CSS modules</li>
                 <li>Axios</li>
-                <li>Web3.js|Ethers</li>
+                <li>Ethers</li>
                 <li>Middlewares</li>
                 <li>...other</li>
             </ul>

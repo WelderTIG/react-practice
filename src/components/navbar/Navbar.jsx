@@ -7,7 +7,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
             <div className={cl.menu}>
                 <Link to="git-repos">Github</Link>
-                <Link to="blocks">Blocks</Link>
+                <Link to="blockchain">Blocks</Link>
             </div>
         </div>
     );
