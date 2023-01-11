@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import cl from "./GitAccount.module.css"
+import cl from "./gitAccount.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getAccountDetails, getUserPublicRepos} from "../../actions/repoActions";
+
 import {Link} from "react-router-dom";
 const GitAccount = () => {
     const dispatch = useDispatch()

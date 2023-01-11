@@ -3,10 +3,6 @@ body {
   flex-direction: column;
 }
 
-.container {
-  display: flex;
-}
-
 a {
   outline: none;
   text-decoration: none;

@@ -2,8 +2,9 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import { getUserPublicRepos} from "../../actions/repoActions";
 import Repo from "../repo/Repo";
-import cl from "./RepoList.module.css"
+import cl from "./repoList.module.css"
 import {Link} from "react-router-dom";
+
 const RepoList = () => {
     const dispatch = useDispatch()
     const repos = useSelector(state => state.repos.items)

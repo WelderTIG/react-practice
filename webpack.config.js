@@ -14,7 +14,10 @@ module.exports = {
         historyApiFallback: true
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+        }
     },
     plugins: [
         new HTMLWebpackPlugin({template: "./src/index.html"}),

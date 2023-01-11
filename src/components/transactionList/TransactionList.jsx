@@ -1,5 +1,5 @@
 import React from 'react';
-import cl from "../repoList/RepoList.module.css";
+import cl from "./transactionList.module.css";
 import {useSelector} from "react-redux";
 import Transaction from "../transaction/Transaction";
 

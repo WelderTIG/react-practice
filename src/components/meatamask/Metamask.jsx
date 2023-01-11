@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {getLastBlockAndTransactions} from "../../actions/blockchainActions";
 import {useDispatch, useSelector} from "react-redux";
-import cl from "./Metamask.module.css";
+import cl from "./metamask.module.css";
 
 const Metamask = () => {
     const dispatch = useDispatch()
