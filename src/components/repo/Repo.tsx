@@ -1,9 +1,8 @@
 import React from 'react';
 import cl from "./repo.module.css"
+import {IRepoProps} from "@/interfaces";
 
-const Repo = (props) => {
-    const repo = props.repo
-
+const Repo: React.FunctionComponent<IRepoProps> = ({repo}: IRepoProps) => {
     return (
         <div className={cl.container}>
             <div>

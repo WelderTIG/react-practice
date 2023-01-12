@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import cl from "./gitAccount.module.css"
-import {useDispatch, useSelector} from "react-redux";
-import {getAccountDetails, getUserPublicRepos} from "../../actions/repoActions";
+import {getAccountDetails, getUserPublicRepos} from "@/actions/repoActions";
+import {useAppDispatch, useAppSelector} from "@/hooks";
 
-import {Link} from "react-router-dom";
+
 const GitAccount = () => {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const [searchValue, setSearchValue] = useState("")
-    const accountDetails = useSelector(state => state.repos.accountDetails)
+    const accountDetails = useAppSelector(state => state.repos.accountDetails)
 
     useEffect(() => {
         dispatch(getAccountDetails())

@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
-import {getLastBlockAndTransactions} from "../../actions/blockchainActions";
-import {useDispatch, useSelector} from "react-redux";
+import {getLastBlockAndTransactions} from "@/actions/blockchainActions";
 import cl from "./metamask.module.css";
+import {useAppDispatch, useAppSelector} from "@/hooks";
 
 const Metamask = () => {
-    const dispatch = useDispatch()
-    const lastBlockInfo = useSelector(state => state.blockchain.lastBlockInfo)
+    const dispatch = useAppDispatch()
+    const lastBlockInfo = useAppSelector(state => state.blockchain.lastBlockInfo)
 
     useEffect(() => {
         dispatch(getLastBlockAndTransactions())

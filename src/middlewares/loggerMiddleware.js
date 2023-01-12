@@ -1,3 +1,4 @@
+
 export const loggerMiddleware = store => next => action => {
     console.groupCollapsed("LOGGER_MIDDLEWARE:  ", action.type)
     console.log("state", store.getState());

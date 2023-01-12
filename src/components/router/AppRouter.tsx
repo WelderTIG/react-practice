@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from "@/components/navbar/Navbar";
+import "@/index.css"
 import HomePage from "@/pages/HomePage";
 import GitReposPage from "@/pages/GitReposPage";
 import BlockchainPage from "@/pages/BlockchainPage";
 import NotFoundPage from "@/pages/NotFoundPage";
-import "@/index.css"
 
 const AppRouter = () => {
     return (

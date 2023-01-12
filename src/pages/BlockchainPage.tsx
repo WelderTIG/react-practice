@@ -1,6 +1,6 @@
 import React from 'react';
-import Metamask from "../components/meatamask/Metamask";
-import TransactionList from "../components/transactionList/TransactionList";
+import Metamask from "@/components/meatamask/Metamask";
+import TransactionList from "@/components/transactionList/TransactionList";
 import cl from "./page.module.css"
 
 const BlockchainPage = () => {

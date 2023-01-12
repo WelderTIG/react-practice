@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import { getUserPublicRepos} from "../../actions/repoActions";
+import {getUserPublicRepos} from "../../actions/repoActions";
 import Repo from "../repo/Repo";
 import cl from "./repoList.module.css"
 import {Link} from "react-router-dom";
+import {IRepo} from "@/interfaces";
+import {useAppDispatch, useAppSelector} from "@/hooks";
 
 const RepoList = () => {
-    const dispatch = useDispatch()
-    const repos = useSelector(state => state.repos.items)
-    const isFetchingError = useSelector(state => state.repos.isFetchingError)
+    const dispatch = useAppDispatch()
+    const repos = useAppSelector(state => state.repos.items)
+    const isFetchingError = useAppSelector(state => state.repos.isFetchingError)
 
     useEffect(() => {
         dispatch(getUserPublicRepos())
@@ -19,7 +20,7 @@ const RepoList = () => {
     }
     return (
         <div className={cl.container}>
-            {repos.map((repo, index) =>
+            {repos.map((repo: IRepo, index: number) =>
                 <Repo key={index} repo={repo}/>
             )}
         </div>

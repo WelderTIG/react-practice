@@ -1,4 +1,4 @@
-export const prepareBlockInfo = (blockInfo) => {
+export const prepareBlockInfo = (blockInfo: any) => {
     return {
         hash: blockInfo.hash,
         parentHash: blockInfo.parentHash,
