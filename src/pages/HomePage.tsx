@@ -11,12 +11,17 @@ const HomePage = () => {
 
             <h4>В проекте применяется:</h4>
             <ul>
-                <li>React, Redux</li>
+                <li>React</li>
+                <li>Redux</li>
                 <li>Routing</li>
                 <li>CSS modules</li>
                 <li>Axios</li>
                 <li>Ethers</li>
                 <li>Middlewares</li>
+                <li>Thunk</li>
+                <li>TypeScript</li>
+                <li>Webpack</li>
+                <li>Saga</li>
                 <li>...other</li>
             </ul>
         </div>

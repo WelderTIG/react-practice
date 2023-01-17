@@ -51,3 +51,16 @@ export interface IDefaultBlockState {
     lastBlockInfo: ILastBlockInfo;
     transactions: ITransaction[];
 }
+export interface ResponseGenerator {
+    config?:any,
+    data?:any,
+    headers?:any,
+    request?:any,
+    status?:number,
+    statusText?:string
+}
+
+export interface ISearchQueryAction {
+    type?: string,
+    searchQuery?: string,
+}

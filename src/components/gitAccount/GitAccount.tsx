@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import cl from "./gitAccount.module.css"
-import {getAccountDetails, getUserPublicRepos} from "@/actions/repoActions";
 import {useAppDispatch, useAppSelector} from "@/hooks";
+import { accountDetailsCreator, reposActionCreator } from '@/store/reposReducer';
 
 
 const GitAccount = () => {
@@ -10,11 +10,12 @@ const GitAccount = () => {
     const accountDetails = useAppSelector(state => state.repos.accountDetails)
 
     useEffect(() => {
-        dispatch(getAccountDetails())
+        dispatch(accountDetailsCreator(""))
     }, [])
+
     function searchHandler() {
-        dispatch(getUserPublicRepos(searchValue))
-        dispatch((getAccountDetails(searchValue)))
+        dispatch(accountDetailsCreator(searchValue))
+        dispatch(reposActionCreator(searchValue))
     }
 
     return (
