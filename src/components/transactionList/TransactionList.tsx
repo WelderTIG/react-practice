@@ -1,19 +1,19 @@
 import React from 'react';
 import { Transaction } from "@/components";
-import { useAppSelector } from "@/hooks";
 import { ITransaction } from "@/interfaces";
+import { rootStore } from '@/store';
 import cl from "./transactionList.module.css";
+import { observer } from 'mobx-react-lite';
 
-const TransactionList = () => {
-    const transactions = useAppSelector(state => state.blockchain.transactions)
+const TransactionList = observer(() => {
 
     return (
         <div className={cl.container}>
-            {transactions.map((tx: ITransaction, index: number) =>
+            {rootStore.blockStore.transactions.map((tx: ITransaction, index: number) =>
                 <Transaction key={index} tx={tx}/>
             )}
         </div>
     );
-};
+});
 
 export default TransactionList;

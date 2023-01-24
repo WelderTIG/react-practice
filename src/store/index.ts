@@ -1,3 +1,1 @@
-export * from "./reposReducer";
-export * from "./blockchainReducer";
-export * from "./root";
+export * from "./rootStore";

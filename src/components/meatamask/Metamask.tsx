@@ -1,28 +1,26 @@
 import React, { useEffect } from 'react';
-import { getLastBlockAndTransactions } from "@/actions";
-import { useAppDispatch, useAppSelector } from "@/hooks";
+import { rootStore } from '@/store';
 import cl from "./metamask.module.css";
+import { observer } from 'mobx-react-lite';
 
-const Metamask = () => {
-    const dispatch = useAppDispatch()
-    const lastBlockInfo = useAppSelector(state => state.blockchain.lastBlockInfo)
+const Metamask = observer(() => {
 
     useEffect(() => {
-        dispatch(getLastBlockAndTransactions())
+        rootStore.blockStore.getLastBlockAndTransactions()
     }, [])
 
     return (
         <div className={cl.container}>
             <h3>LastBlock info</h3>
             <div>
-                <p>BlockHash: {lastBlockInfo.hash}</p>
-                <p>BlockNumber: {lastBlockInfo.number}</p>
-                <p>ParentBlockHash: {lastBlockInfo.parentHash}</p>
-                <p>Timestamp: {lastBlockInfo.timestamp}</p>
-                <p>TxCount: {lastBlockInfo.txCount}</p>
+                <p>BlockHash: {rootStore.blockStore.lastBlockInfo.hash}</p>
+                <p>BlockNumber: {rootStore.blockStore.lastBlockInfo.number}</p>
+                <p>ParentBlockHash: {rootStore.blockStore.lastBlockInfo.parentHash}</p>
+                <p>Timestamp: {rootStore.blockStore.lastBlockInfo.timestamp}</p>
+                <p>TxCount: {rootStore.blockStore.lastBlockInfo.txCount}</p>
             </div>
         </div>
     );
-};
+});
 
 export default Metamask;

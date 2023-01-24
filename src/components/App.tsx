@@ -4,7 +4,7 @@ import { AppRouter } from "@/components";
 
 
 // Должен быть установлен в браузер екстеншн metamask
-export const ethersProvider = new ethers.providers.Web3Provider(window.ethereum)
+export const ethersProvider = new ethers.providers.Web3Provider(window.ethereum);
 
 const App = () => {
     return (

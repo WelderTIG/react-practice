@@ -1,36 +1,33 @@
 import React, {useEffect, useState} from 'react';
 import cl from "./gitAccount.module.css"
-import {useAppDispatch, useAppSelector} from "@/hooks";
-import { accountDetailsCreator, reposActionCreator } from '@/store';
+import { rootStore } from '@/store';
+import { observer } from 'mobx-react-lite';
 
 
-const GitAccount = () => {
-    const dispatch = useAppDispatch()
+const GitAccount = observer(() => {
     const [searchValue, setSearchValue] = useState("")
-    const accountDetails = useAppSelector(state => state.repos.accountDetails)
 
     useEffect(() => {
-        dispatch(accountDetailsCreator(""))
+        rootStore.repoStore.getAccountDetails("")
     }, [])
 
     function searchHandler() {
-        dispatch(accountDetailsCreator(searchValue))
-        dispatch(reposActionCreator(searchValue))
+        rootStore.repoStore.getAccountDetails(searchValue);
     }
 
     return (
         <div className={cl.container}>
             <h1 >Account</h1>
             <input value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} type="test" placeholder="Input account name"/>
-            <button onClick={()=> searchHandler()}>Get repos</button>
+            <button onClick={() => searchHandler()}>Get repos</button>
             <div>
-                <p key="login">Login: {accountDetails["login"]}</p>
-                <p key="id">Id: {accountDetails["id"]}</p>
-                <p key="created_at">Registration date: {accountDetails["created_at"]}</p>
-                <p key="updated_at">Last commit date: {accountDetails["updated_at"]}</p>
+                <p key="login">Login: {rootStore.repoStore.accDetails["login"]}</p>
+                <p key="id">Id: {rootStore.repoStore.accDetails["id"]}</p>
+                <p key="created_at">Registration date: {rootStore.repoStore.accDetails["created_at"]}</p>
+                <p key="updated_at">Last commit date: {rootStore.repoStore.accDetails["updated_at"]}</p>
             </div>
         </div>
     );
-};
+});
 
 export default GitAccount;

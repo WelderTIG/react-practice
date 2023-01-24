@@ -2,30 +2,26 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Repo } from "@/components";
 import { IRepo } from "@/interfaces";
-import { useAppDispatch, useAppSelector } from "@/hooks";
-import { reposActionCreator } from '@/store';
+import { rootStore } from '@/store';
+import { observer } from 'mobx-react-lite';
 import cl from "./repoList.module.css";
 
-const RepoList = () => {
-    const dispatch = useAppDispatch()
-    const repos = useAppSelector(state => state.repos.items)
-    const isFetchingError = useAppSelector(state => state.repos.isFetchingError)
-
+const RepoList = observer(() => {
     useEffect(() => {
-        dispatch(reposActionCreator(""))
+        rootStore.repoStore.getUserRepos("")
     }, [])
     
-
-    if (isFetchingError) {
+    if (rootStore.repoStore.isFetchingError) {
         return <Link to="/">Wrong input</Link>
     }
+
     return (
         <div className={cl.container}>
-            {repos.map((repo: IRepo, index: number) =>
+            {rootStore.repoStore.repos.map((repo: IRepo, index: number) =>
                 <Repo key={index} repo={repo}/>
             )}
         </div>
     );
-};
+});
 
 export default RepoList;
