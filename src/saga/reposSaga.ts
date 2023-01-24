@@ -1,5 +1,5 @@
 import { ISearchQueryAction, ResponseGenerator } from "@/interfaces";
-import { setAccountDetails, setRepos, SET_ACCOUNT_DETAILS_ASYNC_ACTION, SET_REPOS_ASYNC_ACTION } from "@/store/reposReducer";
+import { setAccountDetails, setRepos, SET_ACCOUNT_DETAILS_ASYNC_ACTION, SET_REPOS_ASYNC_ACTION } from "@/store";
 import axios from "axios";
 import { put, takeEvery } from "redux-saga/effects";
 

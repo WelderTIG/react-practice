@@ -1,7 +1,6 @@
-import {ethersProvider} from "@/components/App";
-import {setLastBlockInfo, setTransactions} from '@/store/blockchainReducer';
-import {prepareBlockInfo} from "@/utils/BlockInfo";
-import {AppDispatch} from "@/store";
+import { ethersProvider } from "@/components";
+import { AppDispatch, setLastBlockInfo, setTransactions } from '@/store';
+import { prepareBlockInfo } from "@/utils";
 
 export const getLastBlockAndTransactions = (): any => {
     return async (dispatch: AppDispatch) => {

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import cl from "./gitAccount.module.css"
 import {useAppDispatch, useAppSelector} from "@/hooks";
-import { accountDetailsCreator, reposActionCreator } from '@/store/reposReducer';
+import { accountDetailsCreator, reposActionCreator } from '@/store';
 
 
 const GitAccount = () => {

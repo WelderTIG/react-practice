@@ -1,1 +1,1 @@
-export * as BlockInfo from "./BlockInfo";
+export * from "./blockInfo";

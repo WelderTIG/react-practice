@@ -1,6 +1,6 @@
 import React from 'react';
-import {ethers} from "ethers";
-import AppRouter from "@/components/router/AppRouter";
+import { ethers } from "ethers";
+import { AppRouter } from "@/components";
 
 
 // Должен быть установлен в браузер екстеншн metamask

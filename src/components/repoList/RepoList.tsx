@@ -1,10 +1,10 @@
-import React, {useEffect} from 'react';
-import Repo from "@/components/repo/Repo";
-import cl from "./repoList.module.css"
-import {Link} from "react-router-dom";
-import {IRepo} from "@/interfaces";
-import {useAppDispatch, useAppSelector} from "@/hooks";
-import { reposActionCreator, setRepos } from '@/store/reposReducer';
+import React, { useEffect } from 'react';
+import { Link } from "react-router-dom";
+import { Repo } from "@/components";
+import { IRepo } from "@/interfaces";
+import { useAppDispatch, useAppSelector } from "@/hooks";
+import { reposActionCreator } from '@/store';
+import cl from "./repoList.module.css";
 
 const RepoList = () => {
     const dispatch = useAppDispatch()

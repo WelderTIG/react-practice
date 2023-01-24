@@ -1,6 +1,6 @@
 import React from 'react';
+import { ITransactionProps } from "@/interfaces";
 import cl from "./transaction.module.css";
-import {ITransactionProps} from "@/interfaces";
 
 const Transaction: React.FunctionComponent<ITransactionProps> = ({tx}: ITransactionProps) => {
     return (

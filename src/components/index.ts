@@ -1,9 +1,9 @@
-export * as App from "./App";
-export * as GitAccount from "./gitAccount/GitAccount";
-export * as Metamask from "./meatamask/Metamask";
-export * as Navbar from "./navbar/Navbar";
-export * as Repo from "./repo/Repo";
-export * as RepoList from "./repoList/RepoList";
-export * as AppRouter from "./router/AppRouter";
-export * as Transaction from "./transaction/Transaction";
-export * as TransactionList from "./transactionList/TransactionList";
+export { default as App, ethersProvider } from "./App";
+export { default as GitAccount } from "./gitAccount/GitAccount";
+export { default as Metamask } from "./meatamask/Metamask";
+export { default as Navbar } from "./navbar/Navbar";
+export { default as Repo } from "./repo/Repo";
+export { default as RepoList } from "./repoList/RepoList";
+export { default as AppRouter } from "./router/AppRouter";
+export { default as Transaction } from "./transaction/Transaction";
+export { default as TransactionList } from "./transactionList/TransactionList";

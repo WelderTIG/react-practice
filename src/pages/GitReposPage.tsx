@@ -1,6 +1,5 @@
 import React from 'react';
-import RepoList from "@/components/repoList/RepoList";
-import GitAccount from "@/components/gitAccount/GitAccount";
+import { GitAccount, RepoList } from "@/components";
 import cl from "./page.module.css"
 
 const GitReposPage = () => {

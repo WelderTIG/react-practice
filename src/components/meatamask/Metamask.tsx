@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
-import {getLastBlockAndTransactions} from "@/actions/blockchainActions";
+import React, { useEffect } from 'react';
+import { getLastBlockAndTransactions } from "@/actions";
+import { useAppDispatch, useAppSelector } from "@/hooks";
 import cl from "./metamask.module.css";
-import {useAppDispatch, useAppSelector} from "@/hooks";
 
 const Metamask = () => {
     const dispatch = useAppDispatch()

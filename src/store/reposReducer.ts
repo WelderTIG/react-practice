@@ -1,5 +1,5 @@
-import {IAccountDetails, IDefaultReposState, IRepo} from "@/interfaces";
-import {AnyAction} from "redux";
+import { IAccountDetails, IDefaultReposState, IRepo } from "@/interfaces";
+import { AnyAction } from "redux";
 
 export const SET_ACCOUNT_DETAILS = "SET_ACCOUNT_DETAILS"
 export const SET_REPOS = "SET_REPOS"
@@ -13,7 +13,7 @@ const defaultState = {
     items: <IRepo[]>[],
     isFetchingError: false
 }
-export default function reposReducer(state: IDefaultReposState = defaultState, action: AnyAction) {
+export function reposReducer(state: IDefaultReposState = defaultState, action: AnyAction) {
     switch (action.type) {
         case SET_ACCOUNT_DETAILS:
             return {

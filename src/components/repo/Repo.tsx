@@ -1,6 +1,6 @@
 import React from 'react';
-import cl from "./repo.module.css"
-import {IRepoProps} from "@/interfaces";
+import { IRepoProps } from "@/interfaces";
+import cl from "./repo.module.css";
 
 const Repo: React.FunctionComponent<IRepoProps> = ({repo}: IRepoProps) => {
     return (

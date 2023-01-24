@@ -1,6 +1,5 @@
 import axios from "axios";
-import {setAccountDetails, setFetchingError, setRepos} from "@/store/reposReducer";
-import {AppDispatch} from "@/store";
+import { AppDispatch, setAccountDetails, setFetchingError, setRepos } from "@/store";
 
 export const getUserPublicRepos = (searchQuery = "WelderTIG"): any => {
     if (searchQuery == "") {

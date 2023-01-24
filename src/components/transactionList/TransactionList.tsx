@@ -1,8 +1,8 @@
 import React from 'react';
+import { Transaction } from "@/components";
+import { useAppSelector } from "@/hooks";
+import { ITransaction } from "@/interfaces";
 import cl from "./transactionList.module.css";
-import Transaction from "@/components/transaction/Transaction";
-import {useAppSelector} from "@/hooks";
-import {ITransaction} from "@/interfaces";
 
 const TransactionList = () => {
     const transactions = useAppSelector(state => state.blockchain.transactions)
