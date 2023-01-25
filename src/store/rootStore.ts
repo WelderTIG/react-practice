@@ -1,7 +1,7 @@
 import RepoStore from "@/store/repoStore"
 import BlockStore from "@/store/blockStore";
 
-class RootStore {
+export class RootStore {
     repoStore;
     blockStore;
 
@@ -10,5 +10,3 @@ class RootStore {
         this.blockStore = new BlockStore()
     }
 }
-
-export const rootStore = new RootStore();

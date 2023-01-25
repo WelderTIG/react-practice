@@ -1,23 +1,24 @@
 import React, { useEffect } from 'react';
-import { rootStore } from '@/store';
 import cl from "./metamask.module.css";
+import { useRootStore } from '@/components';
 import { observer } from 'mobx-react-lite';
 
 const Metamask = observer(() => {
+    const {blockStore} = useRootStore()
 
     useEffect(() => {
-        rootStore.blockStore.getLastBlockAndTransactions()
+        blockStore.getLastBlockAndTransactions()
     }, [])
 
     return (
         <div className={cl.container}>
             <h3>LastBlock info</h3>
             <div>
-                <p>BlockHash: {rootStore.blockStore.lastBlockInfo.hash}</p>
-                <p>BlockNumber: {rootStore.blockStore.lastBlockInfo.number}</p>
-                <p>ParentBlockHash: {rootStore.blockStore.lastBlockInfo.parentHash}</p>
-                <p>Timestamp: {rootStore.blockStore.lastBlockInfo.timestamp}</p>
-                <p>TxCount: {rootStore.blockStore.lastBlockInfo.txCount}</p>
+                <p>BlockHash: {blockStore.lastBlockInfo.hash}</p>
+                <p>BlockNumber: {blockStore.lastBlockInfo.number}</p>
+                <p>ParentBlockHash: {blockStore.lastBlockInfo.parentHash}</p>
+                <p>Timestamp: {blockStore.lastBlockInfo.timestamp}</p>
+                <p>TxCount: {blockStore.lastBlockInfo.txCount}</p>
             </div>
         </div>
     );

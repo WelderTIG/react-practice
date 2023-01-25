@@ -1,4 +1,5 @@
 export { default as App, ethersProvider } from "./App";
+export { RootStoreProvider, useRootStore } from "./provider/StoreProvider";
 export { default as GitAccount } from "./gitAccount/GitAccount";
 export { default as Metamask } from "./meatamask/Metamask";
 export { default as Navbar } from "./navbar/Navbar";

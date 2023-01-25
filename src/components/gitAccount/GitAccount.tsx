@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import cl from "./gitAccount.module.css"
-import { rootStore } from '@/store';
 import { observer } from 'mobx-react-lite';
+import { useRootStore } from '@/components';
 
 
 const GitAccount = observer(() => {
     const [searchValue, setSearchValue] = useState("")
+    const {repoStore} = useRootStore()
 
     useEffect(() => {
-        rootStore.repoStore.getAccountDetails("")
+        repoStore.getAccountDetails("")
     }, [])
 
     function searchHandler() {
-        rootStore.repoStore.getAccountDetails(searchValue);
+        repoStore.getAccountDetails(searchValue);
     }
 
     return (
@@ -21,10 +22,10 @@ const GitAccount = observer(() => {
             <input value={searchValue} onChange={(e)=> setSearchValue(e.target.value)} type="test" placeholder="Input account name"/>
             <button onClick={() => searchHandler()}>Get repos</button>
             <div>
-                <p key="login">Login: {rootStore.repoStore.accDetails["login"]}</p>
-                <p key="id">Id: {rootStore.repoStore.accDetails["id"]}</p>
-                <p key="created_at">Registration date: {rootStore.repoStore.accDetails["created_at"]}</p>
-                <p key="updated_at">Last commit date: {rootStore.repoStore.accDetails["updated_at"]}</p>
+                <p key="login">Login: {repoStore.accDetails["login"]}</p>
+                <p key="id">Id: {repoStore.accDetails["id"]}</p>
+                <p key="created_at">Registration date: {repoStore.accDetails["created_at"]}</p>
+                <p key="updated_at">Last commit date: {repoStore.accDetails["updated_at"]}</p>
             </div>
         </div>
     );
