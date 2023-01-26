@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import cl from "./navbar.module.css"
+import { NavButton } from '@/components';
+import { navbar } from "@/styles"
 
 const Navbar = () => {
     return (
-        <div className={cl.container}>
-            <Link to="/">Home</Link>
-            <div className={cl.menu}>
-                <Link to="git-repos">Github</Link>
-                <Link to="blockchain">Blocks</Link>
+        <div className={navbar.container}>
+            <NavButton url="/" buttonName='Home' />
+            <div className={navbar.menu}>
+                <NavButton url="git-repos" buttonName='Github' />
+                <NavButton url="blockchain" buttonName='Blocks' />
             </div>
         </div>
     );

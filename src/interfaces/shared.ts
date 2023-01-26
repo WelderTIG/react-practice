@@ -16,3 +16,8 @@ export interface ISearchQueryAction {
     type?: string,
     searchQuery?: string,
 }
+
+export interface INavButtonProps {
+    url: string;
+    buttonName: string;
+}

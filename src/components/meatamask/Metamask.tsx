@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import cl from "./metamask.module.css";
+import { leftBlock } from "@/styles";
 import { useRootStore } from '@/components';
 import { observer } from 'mobx-react-lite';
 
@@ -11,7 +11,7 @@ const Metamask = observer(() => {
     }, [])
 
     return (
-        <div className={cl.container}>
+        <div className={leftBlock.container}>
             <h3>LastBlock info</h3>
             <div>
                 <p>BlockHash: {blockStore.lastBlockInfo.hash}</p>

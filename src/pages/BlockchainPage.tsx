@@ -1,10 +1,10 @@
 import React from 'react';
 import { TransactionList, Metamask } from "@/components";
-import cl from "./page.module.css"
+import { page } from "@/styles"
 
 const BlockchainPage = () => {
     return (
-        <div className={cl.container}>
+        <div className={page.container}>
             <Metamask/>
             <TransactionList/>
         </div>

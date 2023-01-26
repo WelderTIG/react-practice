@@ -1,10 +1,10 @@
 import React from 'react';
 import { GitAccount, RepoList } from "@/components";
-import cl from "./page.module.css"
+import { page } from "@/styles"
 
 const GitReposPage = () => {
     return (
-        <div className={cl.container}>
+        <div className={page.container}>
             <GitAccount/>
             <RepoList />
         </div>

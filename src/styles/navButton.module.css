@@ -1,0 +1,19 @@
+.container {
+    background: rgb(85, 163, 157);
+    border: none;
+    border-radius: 10%;
+    padding: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.container:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.container:active {
+    background-color: #19411a; /* Green */
+    color: white;
+}
+.container:focus {
+    background-color: #64a718; /* Green */
+    color: white;
+}

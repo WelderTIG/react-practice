@@ -4,7 +4,7 @@ import { Repo } from "@/components";
 import { IRepo } from "@/interfaces";
 import { useRootStore } from '@/components';
 import { observer } from 'mobx-react-lite';
-import cl from "./repoList.module.css";
+import { rightBlock } from "@/styles";
 
 const RepoList = observer(() => {
     const {repoStore} = useRootStore()
@@ -18,7 +18,7 @@ const RepoList = observer(() => {
     }
 
     return (
-        <div className={cl.container}>
+        <div className={rightBlock.container}>
             {repoStore.repos.map((repo: IRepo, index: number) =>
                 <Repo key={index} repo={repo}/>
             )}

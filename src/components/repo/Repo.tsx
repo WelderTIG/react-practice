@@ -1,10 +1,10 @@
 import React from 'react';
 import { IRepoProps } from "@/interfaces";
-import cl from "./repo.module.css";
+import { listItem } from "@/styles";
 
 const Repo: React.FunctionComponent<IRepoProps> = ({repo}: IRepoProps) => {
     return (
-        <div className={cl.container}>
+        <div className={listItem.listItem}>
             <div>
                 <div>Name: {repo.name}</div>
                 <div>Stars: {repo.stargazers_count}</div>
